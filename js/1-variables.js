@@ -19,3 +19,9 @@ numero1 = 12;
 numero2 = 2;
 resultado = numero1+numero2;
 document.writeln('<br>el resultado es: ',resultado) 
+
+const numero4 = parseInt(prompt('ingrese un numero')),
+numero5 = parseInt(prompt('ingrese un segundo numero'));
+console.log(numero4)
+console.log(numero5)
+document.writeln("<br>el resultado es= "+ (numero4 + numero5)); 
