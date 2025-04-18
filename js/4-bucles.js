@@ -11,3 +11,8 @@ do{
     document.writeln(`<p>Hola, soy un renglon ${linea}</p>`);
     linea++;
 } while (linea <= 10);
+
+
+for (let contador = 10; contador > 0; contador--){
+document.writeln(`<p>${contador}</p>`);
+}
