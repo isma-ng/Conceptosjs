@@ -4,6 +4,16 @@ const paises = [];
 //array con datos
 const comidas = ["🍔", 2.5, true, "pizza", 25];
 
+//declaraciones de funciones
+function listasComidas(titulo){
+  document.writeln(`<h3>${titulo}</h3>`);
+  document.writeln(`<ul>`);
+  for (let i = 0; i < comidas.length; i++) {
+    document.writeln(`<li>${comidas[i]}</li>`);
+  }
+  document.writeln(`</ul>`);
+}
+
 //mostrar el array
 console.log(paises);
 console.log(comidas);
@@ -15,77 +25,30 @@ document.writeln("<br>Cantidad de elementos en el array: " + comidas.length);
 
 //i++
 //i = i+1
-document.writeln(`<ul>`);
-for (let i = 0; i < comidas.length; i++) {
-  document.writeln(`<li>${comidas[i]}</li>`);
-}
-document.writeln(`</ul>`);
+listasComidas("Mostramos el array");
 
 //Agregar elementos al array
-document.writeln("<h3>Agregar un elemento al principio del array</h3>");
 comidas.unshift("🍟", "🍕");
+listasComidas("agregamos elementos al principio del array");
 
-document.writeln(`<ul>`);
-for (let i = 0; i < comidas.length; i++) {
-  document.writeln(`<li>${comidas[i]}</li>`);
-}
-document.writeln(`</ul>`);
-
-document.writeln("<h3>Agregar un elemento al final del array</h3>");
 comidas.push("🥗");
+listasComidas("agregamos un elemento al final del array");
 
-document.writeln(`<ul>`);
-for (let i = 0; i < comidas.length; i++) {
-  document.writeln(`<li>${comidas[i]}</li>`);
-}
-document.writeln(`</ul>`);
-
-document.writeln("<h3>Agregar un elemento en el medio del array</h3>");
 comidas.splice(3, 0, "🥐");
+listasComidas("agregamos un elemento en el medio del array");
 
-document.writeln(`<ul>`);
-for (let i = 0; i < comidas.length; i++) {
-  document.writeln(`<li>${comidas[i]}</li>`);
-}
-document.writeln(`</ul>`);
-
-document.writeln("<h3>Borrar un elemento al principio del array</h3>");
 comidas.shift();
+listasComidas("Borramos un elemento al principio del array");
 
-document.writeln(`<ul>`);
-for (let i = 0; i < comidas.length; i++) {
-  document.writeln(`<li>${comidas[i]}</li>`);
-}
-document.writeln(`</ul>`);
-
-document.writeln("<h3>Borrar un elemento al final del array</h3>");
 comidas.pop();
+listasComidas("Borramos un elemento al final del array");
 
-document.writeln(`<ul>`);
-for (let i = 0; i < comidas.length; i++) {
-  document.writeln(`<li>${comidas[i]}</li>`);
-}
-document.writeln(`</ul>`);
-
-document.writeln("<h3>Borrar un elemento en el medio del array</h3>");
 comidas.splice(3,1)
+listasComidas("Borramos un elemento en el medio del array");
 // comidas.splice(3,2) //esta opcion borra dos elementos desde la posicion 3
 // comidas.splice(3) //borra todo desde la posicion 3
 
-document.writeln(`<ul>`);
-for (let i = 0; i < comidas.length; i++) {
-  document.writeln(`<li>${comidas[i]}</li>`);
-}
-document.writeln(`</ul>`);
-
-document.writeln("<h3>Modificar un elemento del array</h3>");
-
 console.log(comidas[5])
 console.log(comidas[comidas.length - 1])
-
 comidas[5] = '🍞'
-document.writeln(`<ul>`);
-for (let i = 0; i < comidas.length; i++) {
-  document.writeln(`<li>${comidas[i]}</li>`);
-}
-document.writeln(`</ul>`);
+listasComidas('Modificar un elemento del array');
