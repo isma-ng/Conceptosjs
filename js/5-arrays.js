@@ -52,3 +52,18 @@ console.log(comidas[5])
 console.log(comidas[comidas.length - 1])
 comidas[5] = '🍞'
 listasComidas('Modificar un elemento del array');
+
+// como saber si un elemento existe en el array
+const hamburguesa = comidas.find( comidas => comidas === '🍔')
+const hamburguesaPosition = comidas.findIndex( comidas => comidas === '🍔')
+const ensalada = comidas.find( comidas => comidas === '🥗')
+const ensaladaPosition = comidas.findIndex( comidas => comidas === '🥗')
+const pan = comidas.find( comidas => comidas === '🍞')
+const panPosition = comidas.findIndex( comidas => comidas === '🍞')
+
+console.log(hamburguesa)
+console.log('indice de la hamburguesa ' + hamburguesaPosition)
+console.log(ensalada)
+console.log('indice de la ensalada ' + ensaladaPosition)
+console.log(pan)
+console.log('indice del pan ' + panPosition)
